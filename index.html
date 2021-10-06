@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Programa 2</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+
+				<!-- Intro -->
+					<div id="intro">
+						<h1>Programa 2<br />
+						Expresiones Regulares</h1>
+						
+						<ul class="actions">
+							<li><a href="#date" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+						</ul>
+					</div>
+				<!-- Main -->
+					<div id="main">
+							<article class="post featured">
+								<header class="major">
+									<span id="date" class="date">Octubre 05, 2021</span>
+									<h2><a href="#labelContraseña">Validación de<br />
+									Expresiones Regulares</a></h2>
+									<div class="fields">
+										<div class="field">
+											<label for="contra">Escribe la contraseña:</label>
+											<input type="text" name="contra" id="contra" maxlength="10" placeholder="Máximo 10 caracteres" required />
+											<br/>
+										</div>
+										<div class="field">
+											<label for="regExp">Escribe la Expresión Regular:</label>
+											<input type="text" name="regExp" id="regExp" placeholder="No es necesario encerrar la expresión entre barras / ... /" value="[A-Z]\d{3}[a-z]{3}\W{3}"/>
+											<br/>
+										</div>
+										<div>
+											<button id="validar" class="logo" onclick="getValueInput()">validar</button>
+										</div>
+									</div>
+									<p id="parrafoValidación"></p>
+								<a href="#intro" class="image main"><img id="MiWaifu" src="images/NozomiMmm.png" alt="Hermosa mi waifu" /></a>
+								</header>
+							</article>
+					</div>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
