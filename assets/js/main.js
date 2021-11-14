@@ -179,22 +179,28 @@
 
 })(jQuery);
 
-function getValueInput(){
-	let inputContra = document.querySelector("#contra").value;
-	let inputRegExp = document.querySelector("#regExp").value;
+// Get the modal
+var modal = document.getElementById("myModal");
 
-	validar(inputContra,inputRegExp);
+// Get the button that opens the modal
+//var btn = document.getElementById("validar");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+/*btn.onclick = function() {
+  modal.style.display = "block";
+}*/
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
 }
 
-function validar(string,expReg){
-	var expresionRegular = new RegExp(expReg);
-
-	if(expresionRegular.test(string)){
-		document.querySelector("#parrafoValidación").innerHTML = `Contraseña válida`;
-		document.querySelector("#MiWaifu").src = "images/NozomiHappy.jpg";
-	}
-	else{
-		document.querySelector("#parrafoValidación").innerHTML = `Contraseña no válida`; 
-		document.querySelector("#MiWaifu").src = "images/NozomiSad.jpg";
-	}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
 }

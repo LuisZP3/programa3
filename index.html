@@ -1,10 +1,11 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Programa 2</title>
+		<title>Programa 3</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/vis/dist/vis.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -14,8 +15,8 @@
 
 				<!-- Intro -->
 					<div id="intro">
-						<h1>Programa 2<br />
-						Expresiones Regulares</h1>
+						<h1>Programa 3<br />
+						Autómata Finito Determinista</h1>
 						
 						<ul class="actions">
 							<li><a href="#date" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
@@ -25,26 +26,54 @@
 					<div id="main">
 							<article class="post featured">
 								<header class="major">
-									<span id="date" class="date">Octubre 05, 2021</span>
-									<h2><a href="#labelContraseña">Validación de<br />
-									Expresiones Regulares</a></h2>
+									<span id="date" class="date">Noviembre 15, 2021</span>
+									<h2><a href="#labelPalabra">Validación de<br />
+									Palabras en un Autómata</a></h2>
 									<div class="fields">
 										<div class="field">
-											<label for="contra">Escribe la contraseña:</label>
-											<input type="text" name="contra" id="contra" maxlength="10" placeholder="Máximo 10 caracteres" required />
+											<span><strong>Expresión Regular: ab*d*c*</strong></span>
+											<ul>Palabras Aceptadas
+
+												<li>abdc</li>
+												<li>abc</li>
+												<li>ad</li>
+												<li>abddddcccccc</li>
+											</ul>
+											<label id="labelPalabra" for="palabra">Escribe una palabra:</label>
+											<div id="input-button">
+											<input type="text" name="palabra" id="palabra" minlength="1"  placeholder="Ten en cuenta la expresión regular!" required />
+											</div>
+											<div id="button-input">
+												<button id="validar" class="logo" onclick="getValueInput()">validar</button>
+											</div>
 											<br/>
-										</div>
-										<div class="field">
-											<label for="regExp">Escribe la Expresión Regular:</label>
-											<input type="text" name="regExp" id="regExp" placeholder="No es necesario encerrar la expresión entre barras / ... /" value="[A-Z]\d{3}[a-z]{3}\W{3}"/>
 											<br/>
 										</div>
 										<div>
-											<button id="validar" class="logo" onclick="getValueInput()">validar</button>
+											<div style="float:left">Rápido</div>
+											<div style="float:right">Lento</div>
+										</div>
+										<div class="slidecontainer">
+  											<input type="range" min="1" max="1000" class="slider" id="myRange">
+  											<p>Tiempo de espera: <span id="time"></span> segundos</p>
+										</div>
+										<div id="automata" class="field"></div>
+										<br/>
+									</div>
+
+									<!-- The Modal -->
+									<div id="myModal" class="modal">
+										<!-- Modal content -->
+										<div class="modal-content">
+										  <div class="modal-header">
+										    <span class="close">&times;</span>
+											<h2 id="parrafoValidacion" style="color:white"></h2>
+										  </div>
+										  <div class="modal-body">
+										    <img id="MiWaifu" src="" alt="Hermosa mi waifu" />
+										  </div>
 										</div>
 									</div>
-									<p id="parrafoValidación"></p>
-								<a href="#intro" class="image main"><img id="MiWaifu" src="images/NozomiMmm.png" alt="Hermosa mi waifu" /></a>
 								</header>
 							</article>
 					</div>
@@ -58,6 +87,8 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script type="text/javascript" src="assets/vis/dist/vis.js"></script>
+			<script src="assets/js/automata.js"></script>
 
 	</body>
 </html>
